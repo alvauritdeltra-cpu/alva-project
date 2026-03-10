@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Caption Generator</title>
+</head>
+<body>
+
+<h2>AI Caption Generator</h2>
+
+<input type="text" id="tema" placeholder="Masukkan tema">
+<button onclick="generate()">Generate</button>
+
+<p id="hasil"></p>
+
+<script>
+function generate(){
+
+let captions = [
+"Kadang kehilangan adalah cara semesta mengajarkan kita arti menghargai.",
+"Cinta tak selalu tentang memiliki, kadang tentang merelakan.",
+"Aku baik-baik saja, hanya hatiku yang masih belajar lupa."
+]
+
+let random = captions[Math.floor(Math.random()*captions.length)];
+
+document.getElementById("hasil").innerText = random;
+
+}
+</script>
+
+</body>
+</html>
