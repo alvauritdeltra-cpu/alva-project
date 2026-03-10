@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warung Kopi Senja</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    :root {
+      --primary: #6f4e37;
+      --dark: #333;
+      --light: #ffffff;
+      --bg: #f5f5f5;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--light);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      color: var(--primary);
+      font-size: 20px;
+    }
+
+    nav a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: var(--dark);
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    #home {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url("https://images.unsplash.com/photo-1509042239860-f550ce710b93");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    #home h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    #home p {
+      margin-bottom: 20px;
+    }
+
+    #home a {
+      background: var(--primary);
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: var(--primary);
+    }
+
+    #menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--light);
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    #kontak {
+      text-align: center;
+    }
+
+    #kontak a {
+      display: inline-block;
+      margin-top: 15px;
+      background: #25D366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Warung Kopi Senja</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#menu">Menu</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Nikmati Kopi dengan Tenang</h2>
+    <p>Kopi hangat, suasana senja, dan cerita yang pulang.</p>
+    <a href="https://wa.me/6281234567890">Pesan via WhatsApp</a>
+  </section>
+
+  <section id="tentang">
+    <h2>Tentang Kami</h2>
+    <p style="text-align:center; max-width:700px; margin:auto;">
+      Warung Kopi Senja adalah tempat sederhana untuk menikmati kopi,
+      berbagi cerita, dan beristirahat dari hiruk pikuk dunia.
+    </p>
+  </section>
+
+  <section id="menu">
+    <h2>Menu Kami</h2>
+
+    <div class="card">
+      <h3>Kopi Hitam</h3>
+      <p>Rp15.000</p>
+    </div>
+
+    <div class="card">
+      <h3>Kopi Susu</h3>
+      <p>Rp18.000</p>
+    </div>
+
+    <div class="card">
+      <h3>Teh Hangat</h3>
+      <p>Rp10.000</p>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <h2>Hubungi Kami</h2>
+    <p>📍 Jl. Senja No. 10</p>
+    <p>📞 0812-3456-7890</p>
+    <a href="https://wa.me/6281234567890">Chat WhatsApp</a>
+  </section>
+
+  <footer>
+    <p>© 2026 Warung Kopi Senja</p>
+  </footer>
+
+</body>
+</html>
