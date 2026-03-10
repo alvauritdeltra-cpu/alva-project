@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Catatan Jam 2 Pagi</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0a0a12;
+color:#dcdce6;
+font-family:'Inter', sans-serif;
+line-height:1.7;
+padding:40px 20px;
+max-width:800px;
+margin:auto;
+}
+
+/* bintang kecil */
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-image:
+radial-gradient(white 1px, transparent 1px);
+background-size:80px 80px;
+opacity:0.06;
+pointer-events:none;
+}
+
+h1,h2{
+font-family:'Playfair Display', serif;
+font-weight:600;
+margin-bottom:15px;
+}
+
+h1{
+font-size:32px;
+}
+
+h2{
+margin-top:70px;
+font-size:24px;
+}
+
+p{
+margin-bottom:18px;
+opacity:0.85;
+}
+
+nav{
+margin-bottom:60px;
+font-size:14px;
+opacity:0.7;
+}
+
+nav a{
+margin-right:20px;
+text-decoration:none;
+color:#bfbfd6;
+transition:0.3s;
+}
+
+nav a:hover{
+opacity:1;
+}
+
+.section{
+margin-bottom:90px;
+}
+
+.karya p{
+margin-bottom:30px;
+font-style:italic;
+}
+
+footer{
+margin-top:80px;
+font-size:13px;
+opacity:0.4;
+text-align:center;
+}
+
+/* animasi halus */
+.fade{
+opacity:0;
+transform:translateY(15px);
+transition:1s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#karya">Karya</a>
+<a href="#kontak">Kontak</a>
+</nav>
+
+<section id="home" class="section fade">
+<h1>Catatan Jam 2 Pagi</h1>
+
+<p>
+Ada sesuatu yang aneh tentang jam dua pagi.
+Dunia terasa lebih sunyi,
+pikiran lebih jujur,
+dan tiba-tiba manusia merasa perlu
+mempertanyakan seluruh hidupnya.
+</p>
+
+<p>
+Kadang aku ingin jatuh cinta,
+tapi sebelum itu terjadi
+aku malah sibuk memikirkan
+kenapa bintang terlihat begitu yakin
+sementara manusia bahkan ragu
+saat memilih mie instan rasa ayam atau kari.
+</p>
+
+<p>
+Dan entah kenapa,
+di semua malam yang penting,
+air galon selalu habis
+tepat ketika dibutuhkan.
+Alam semesta mungkin sedang bercanda.
+</p>
+</section>
+
+<section id="about" class="section fade">
+<h2>Tentang Penulis</h2>
+
+<p>
+Sejujurnya aku juga tidak terlalu yakin
+kenapa website ini ada.
+</p>
+
+<p>
+Awalnya hanya ingin menulis sesuatu,
+lalu tiba-tiba halaman kosong ini muncul
+seperti langit malam yang terlalu luas
+untuk sebuah pikiran yang terlalu kecil.
+</p>
+
+<p>
+Mungkin ini hanya tempat
+untuk menaruh kalimat-kalimat
+yang terlalu aneh untuk buku harian
+tapi terlalu jujur untuk disimpan sendiri.
+</p>
+
+<p>
+Jika kamu membaca ini,
+berarti kita sama:
+sedikit penasaran,
+sedikit bingung,
+dan entah kenapa masih terjaga
+di waktu yang seharusnya digunakan untuk tidur.
+</p>
+</section>
+
+<section id="karya" class="section karya fade">
+<h2>Karya</h2>
+
+<p>
+Aku pernah mencoba memahami hidup
+dengan cara menatap langit terlalu lama.
+Hasilnya tidak ada jawaban,
+hanya leher yang pegal
+dan perasaan kecil yang aneh.
+</p>
+
+<p>
+Ada orang yang datang
+seperti meteor:
+indah,
+singkat,
+dan meninggalkan lubang
+yang tidak tahu harus diisi dengan apa.
+</p>
+
+<p>
+Aku pernah berpikir
+bahwa mungkin kita semua hanyalah
+catatan kaki kecil
+dalam buku besar milik alam semesta
+yang bahkan belum selesai ditulis.
+</p>
+
+<p>
+Jika suatu hari kita bertemu lagi,
+aku harap semesta tidak terlalu sibuk
+mengatur bintang
+sehingga lupa
+memberi kita sedikit keberanian.
+</p>
+</section>
+
+<section id="kontak" class="section fade">
+<h2>Kontak</h2>
+
+<p>
+Jika kamu ingin mengatakan sesuatu,
+silakan.
+</p>
+
+<p>
+Jika tidak,
+itu juga tidak apa-apa.
+</p>
+
+<p>
+Beberapa hal memang lebih indah
+ketika dibiarkan menjadi
+pikiran yang lewat sebentar,
+lalu pergi.
+</p>
+
+<p>
+email: seseorang@langitmalam.com
+</p>
+</section>
+
+<footer>
+dibuat dengan sedikit kebingungan dan terlalu banyak kopi
+</footer>
+
+<script>
+
+const faders = document.querySelectorAll('.fade');
+
+const appear = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+});
+});
+
+faders.forEach(el=>appear.observe(el));
+
+</
